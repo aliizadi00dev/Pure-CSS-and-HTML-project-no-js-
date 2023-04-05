@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درگاه اصلی آستان قدس رضوی</title>
+    <link rel="shortcut icon" href="pics/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mediaQueries.css" type="text/css" media="screen">
+</head>
+<body>
+    <a href="#help" tabindex="1"></a>
+    <div id="help">
+        <table>
+            <tr>
+                <th colspan="2">Keyboard Shortcuts:</th>
+            </tr>
+            <tr>
+                <td>escape</td>
+                <td>alt + q || alt + shift + q</td>
+            </tr>
+            <tr>
+                <td>cli(command-line interface)</td>
+                <td>alt + r || alt + shift + r</td>
+            </tr>
+            <tr>
+                <td>toolbar box</td>
+                <td>alt + h || alt + shift + h</td>
+            </tr>
+        </table>
+    </div>
+    <input type="checkbox"  id="toolbar-toggler" accesskey="h">
+    <div class="toolbar"></div>
+    <input type="radio" name="cursor" id="cur1" class="radio-bar" checked>
+    <input type="radio" name="cursor" id="cur2" class="radio-bar">
+    <input type="radio" name="cursor" id="cur3" class="radio-bar">
+    <input type="radio" name="cursor" id="cur4" class="radio-bar">
+    <!-- ------------------ -->
+    <input type="radio" name="bg" id="bg1" class="bg-change">
+    <input type="radio" name="bg" id="bg2" class="bg-change">
+    <input type="radio" name="bg" id="bg3" class="bg-change">
+    <input type="radio" name="bg" id="bg4" class="bg-change">
+    <input type="radio" name="bg" id="bg5" class="bg-change" checked>
+    <!-- ------------------- -->
+    <div id="void"><h3>کلیک شما دریافت شد.</h3><button><a href="#mess-void" accesskey="ض" >تایید شد</a><a href="#mess-void" accesskey="q" style="display: none;"></a></button></div>
+    <div class="loading"><div class="lds-dual-ring"></div></div>
+    <input type="checkbox" id="switch_theme" /><label for="switch_theme"></label>
+    <div class="container">
+        <header class="header">
+            <div class="Logo_main">
+                <a href="index.html">
+                   <img src="pics/logo.png" title="خانه" id="mainLogo">
+               </a>
+           </div>
+            <div class="name_site">
+                <div class="name_site_item1">
+                    <a href="index.html">
+                        <img src="pics/logo-r1.png" title="خانه" id="leftLogo">
+                    </a>
+                </div>
+                <div class="name_site_item2">
+                    <a href="index.html">
+                        <h4>درگاه اصلی آستان قدس رضوی</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar_primary">
+                <ul>
+                    <div class="nav_pr_right">
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="pages/favorite-news.html">اخبار برگزیده</a></li>
+                    </div>
+                    <div class="null_space">
+                        <div class="nav_pr_center">
+                            <img src="pics/logo-head.png" >
+                        </div>
+                    </div>
+                    <div class="nav_pr_left">
+                        <li><a href="pages/shrineology.html">حرم شناسی</a></li>
+                        <li><a href="pages/razavi-life.html">زندگی رضوی</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="burger_menu">
+                <a href="#menu_right"><i class="fas fa-bars"></i></a>
+                <div id="menu_right">
+                    <ul>
+                        <li>
+                            <form action="pages/search-page.html">
+                                <div class="input_group">
+                                    <input type="search" name="search_right_menu" id="search_right_menu" placeholder="جستجو ..." autocomplete="off">
+                                    <button type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </li><hr>
+                        <li><a href="#void">صفحه نخست</a></li><hr>
+                        <li><a href="#void">اخبار</a></li><hr>
+                        <li><a href="#void">حرم شناسی</a></li><hr>
+                        <li><a href="#void">چهارشنبه های امام رضایی</a></li><hr>
+                        <li><a href="#void">زندگی رضوی</a></li><hr>
+                        <li><a href="#void">ویدئو</a></li><hr>
+                        <li><a href="#void">پادکست</a></li><hr>
+                        <li><a href="#void">کتاب رضوی</a></li><hr>
+                        <li><a href="#void">شماره تماس های آستان قدس</a></li><hr>
+                        <li><a href="#void">ویژه نامه ها </a></li><hr>
+                        <li><a href="#void">ستاد خبری حراست</a></li><hr>
+                        <li><a href="#void">ارسال پیام</a></li><hr>
+                    </ul>    
+                    <div id="left_icons_menu">
+                        <a href="#"><i class="fa fa-window-close"></i></a>
+                        <a href="#void"><i class="fas fa-home"></i></a>
+                        <a href="#void"><i class="fab fa-rocketchat"></i></a>
+                        <a href="#void"><i class="fab fa-internet-explorer"></i></a>
+                        <a href="#void"><i class="fab fa-twitter"></i></a>
+                        <a href="#void"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search_tools">
+                <form action="pages/search-page.html" method="get">
+                    <div class="input_group">
+                        <input type="search" name="search_top" id="search_top" placeholder="جستجو ..."  autocomplete="off">
+                        <button type="submit" >
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+        <div class="layout_top_first">
+            <div class="slideshow-container" >
+                <a id="slider-img-1"></a>
+                <a id="slider-img-2"></a>
+                <a id="slider-img-3"></a>
+                <div class="slides" >
+                    <div class="sub_slide">
+                        <div class="image_slide round_corner">
+                            <a href="#void"><img src="pics/top-slide/slide1.jpg" alt="razavi.ir" title="زمین‌های ورزشی چند منظوره آستان قدس رضوی در حاشیه شهر مشهد افتتاح می‌شود" laoding="lazy"></a>
+                        </div>        
+                        <div class="slide_description">
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span>۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱</span>
+                            </div>
+                            <br>
+                            <h3 class='title_content'>
+                                <a href="#void">
+                                    قدیمی‌ترین اسناد عزاداری امام حسین(ع) در حرم امام رضا(ع) رونمایی شد
+                                </a>
+                            </h3>
+                            <br>
+                            <p>
+                                قدیمی‌ترین اسناد برگزاری عزاداری امام حسین(ع) در حرم امام رضا(ع) در یکصد و سی و ششمین برنامه سه‌شنبه‌های علمی وفرهنگی آستان قدس رضوی رونمایی شد.
+                            </p>
+                        </div>
+                        <a href="#slider-img-3" class="pre">
+                            <button ><i class="fas fa-chevron-right"></i></button>
+                        </a>
+                        <a href="#slider-img-2" class="next">
+                            <button ><i class="fas fa-chevron-left"></i></button>
+                        </a>
+                    </div>
+                    <div class="sub_slide">
+                        <div class="image_slide round_corner">
+                            <a href="#void"><img src="pics/top-slide/slide2.jpg" alt="razavi.ir" title="زمین‌های ورزشی چند منظوره آستان قدس رضوی در حاشیه شهر مشهد افتتاح می‌شود" loading="lazy"></a>
+                        </div>        
+                        <div class="slide_description">
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span>۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱</span>
+                            </div>
+                            <br>
+                            <h3 class='title_content'>
+                                <a href="#void">واکنش تولیت آستان قدس رضوی به اظهارات سخیف یکی از سران فتنه</a>
+                            </h3>
+                            <br>
+                            <p>
+                                تولیت آستان قدس رضوی با محکومیت اظهارات اخیر یکی از سران فتنه، این قبیل رفتارهای غیراخلاقی را عقده‌گشایی‌هایی با اهداف شوم دانست.
+                            </p>
+                        </div>
+                        <a href="#slider-img-1" class="pre">
+                            <button ><i class="fas fa-chevron-right"></i></button>
+                        </a>
+                        <a href="#slider-img-3" class="next">
+                            <button ><i class="fas fa-chevron-left"></i></button>
+                        </a>
+                    </div>
+                    <div class="sub_slide">
+                        <div class="image_slide round_corner">
+                            <a href="#void"><img src="pics/top-slide/slide3.jpg" alt="razavi.ir" title="زمین‌های ورزشی چند منظوره آستان قدس رضوی در حاشیه شهر مشهد افتتاح می‌شود" loading="lazy"></a>
+                        </div>        
+                        <div class="slide_description">
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span>۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱</span>
+                            </div>
+                            <br>
+                            <h3 class='title_content'>
+                                <a href="#void">مجمع مشورتی مسئولان ارشد استان خراسان رضوی ویژه دهه آخر صفر</a>
+                            </h3>
+                            <br>
+                            <p>
+                                مجمع مشورتی مسئولان ارشد استان خراسان رضوی پیرامون مسائل دهه آخر صفر با حضور تولیت آستان قدس در تالار ولایت حرم رضوی برگزار شد.
+                            </p>
+                        </div>
+                        <a href="#slider-img-2" class="pre">
+                            <button ><i class="fas fa-chevron-right"></i></button>
+                        </a>
+                        <a href="#slider-img-1" class="next">
+                            <button ><i class="fas fa-chevron-left"></i></button>
+                        </a>
+
+                    </div>
+                </div>
+                <span class="span_button_slide active" id="a1"><a  href="#slider-img-1"></a></span>
+                <span class="span_button_slide" id="a2" ><a  href="#slider-img-2"></a></span>
+                <span class="span_button_slide" id="a3" ><a  href="#slider-img-3"></a></span>
+            </div> 
+
+            <div class="left_images">
+                <div class="left_top_image round_corner">
+                    <a href="#void"><img src="pics/top-slide/leftImage1.jpg" alt="razavi.ir" title="حرم شناسی"  loading="lazy"></a>
+                </div>
+                <div class="left_bottom_image round_corner">
+                    <a href="#void"><img src="pics/top-slide/leftImage2.jpg" alt="razavi.ir" title="برنامه های حرم مطهر امام رضا (ع)"  loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+        <div class="layout_news_second">
+            <div class="right_box">
+                <div class="news_box">
+                    <div class="news_box_caption">
+                        <button ><i class="fas fa-chevron-left"></i></button>
+                        <button ><i class="fas fa-chevron-right"></i></button>
+                        <h2>
+                            <i class="fab fa-creative-commons-nd"></i>
+                            اخبار برگزیده
+                        </h2>
+                    </div>
+                    <div class="news_box_slider">
+                        <div class="news_item">
+                            <div class="news_item_image">
+                                <a href="#void"><img src="pics/layout-second/item-one.jpg" loading="lazy"></a>
+                                    <div class="slide_date"><span>۱۴۰۱/۰۵/۰۷ - ۱۰:۰۰ </span><i class="far fa-calendar-alt"></i></div>
+                                </img>
+                            </div>
+                            <div class="news_item_context">
+                                <h3><a href="#void">نشست هم‌انديشي بنیاد بهره‌وری موقوفات آستان قدس رضوی و فرابورس ايران</a></h3>
+                                <p>دستیار رئیس بنیاد بهره‌وری موقوفات آستان قدس رضوی گفت: ایجاد منابع پایدار مالی برای خدمت به زائران…</p>
+                            </div>
+                        </div>
+                        <div class="news_item">
+                            <div class="news_item_image">
+                                <a href="#void"><img src="pics/layout-second/item-two.jpg" loading="lazy" ></a>
+                                    <div class="slide_date"><span>۱۴۰۱/۰۵/۰۷ - ۱۰:۰۰ </span><i class="far fa-calendar-alt"></i></div>
+                                </img>
+                            </div>
+                            <div class="news_item_context">
+                                <h3><a href="#void">مؤسسه جوانان بنیاد کرامت رضوی؛ میزبان عزاداران حسینی</a></h3>
+                                <p>به همت موسسه جوانان و تشکل‌های انقلابی بنیاد کرامت رضوی، مراسم عزاداری دهه اول محرم الحرام در فضای…</p>
+                            </div>
+                        </div>
+                        <div class="news_item">
+                            <div class="news_item_image">
+                                <a href="#void"><img src="pics/layout-second/item-three.jpg" loading="lazy" ></a>
+                                    <div class="slide_date"><span>۱۴۰۱/۰۵/۰۷ - ۱۰:۰۰ </span><i class="far fa-calendar-alt"></i></div>
+                                </img>
+                            </div>
+                            <div class="news_item_context">
+                                <h3><a href="#void">عزاداری کفن‌پوشان گلستانی در حسینیه حرم رضوی</a></h3>
+                                <p>چهارمین شب محرم، نوبت گلستانی‌ها بود که در صحن قدس حرم مطهر رضوی، بساط عزاداری‌شان را به پا کنند و…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="live_preview round_corner" >
+                <a href="#void"><img src="pics/layout-second/live-preview.jpg" alt="razavi.ir"  loading="lazy"></a>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------------------- -->
+        <div class="layout_services_third">
+            <div class="caption_box">
+                <h2>
+                    <i class="fas fa-list-ul"></i>
+                    خدماتی برای زائر و مجاور رضوی
+                </h2>
+                <div class="chevrons">
+                    <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+            </div>            
+            <div class="slider_box">
+                <div class="slider_box_container">
+                    <div class="slider_item_container">
+                        <div class="slider_item">
+                            <i class="fas fa-city"></i>
+                            <a href="#void" class="link">موزه</a>
+                            <p>گنجینه‌ای از آثار منحصر به فرد جهان</p>
+                            <a href="#void" class="button">ورود</a>
+                        </div>
+                    </div>
+                    <div class="slider_item_container">
+                        <div class="slider_item">
+                            <i class=" 	fas fa-american-sign-language-interpreting"></i>
+                            <a href="#void" class="link">ارتباطات مردمی</a>
+                            <p>گنجینه‌ای از آثار منحصر به فرد جهان</p>
+                            <a href="#void" class="button">ورود</a>
+                        </div>
+                    </div>
+                    <div class="slider_item_container">
+                        <div class="slider_item">
+                            <i class="fab fa-audible"></i>
+                            <a href="#void" class="link">پخش زنده حرم مطهر</a>
+                            <p>گنجینه‌ای از آثار منحصر به فرد جهان</p>
+                            <a href="#void" class="button">ورود</a>
+                        </div>
+                    </div>
+                    <div class="slider_item_container">
+                        <div class="slider_item">
+                            <i class=" 	fas fa-door-open"></i>
+                            <a href="#void" class="link">کتابخانه حرم</a>
+                            <p>گنجینه‌ای از آثار منحصر به فرد جهان</p>
+                            <a href="#void" class="button">ورود</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout_featuredMenu_middle">
+            <nav>
+                <input type="radio" name="nav" id="nav1" checked>
+                <label for="nav1">حرم مطهر رضوی</label>
+                <input type="radio" name="nav" id="nav2">
+                <label for="nav2">سازمان مرکزی </label>
+                <input type="radio" name="nav" id="nav3">
+                <label for="nav3">بنیاد کرامت رضوی</label>
+                <input type="radio" name="nav" id="nav4">
+                <label for="nav4">سازمان علمی-فرهنگی</label>
+                <input type="radio" name="nav" id="nav5">
+                <label for="nav5">بنیاد بهره وری موقوفات</label>
+            </nav>
+            <div class="features_context" id="slide01">
+                <div class="context_menu">
+                    <ul>
+                        <li>اداره کل نذورات</li>
+                        <li>پنچره فولاد</li>
+                        <li>اجلاسیه استان های مقدس</li>
+                        <li>آموزش رضوان</li>
+                        <li>زیارت آنلاین</li>
+                        <li>زیارت نیابتی</li>
+                    </ul>
+                </div>
+                <div class="content_field" >
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"><img src="pics/layout_featuredMenu_middle/slide-one.jpg" alt="razavi.ir"  loading="lazy"></a> 
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void">پویش نذر آب؛ فرصتی برای میزبانی از زائران پیاده‌روی اربعین حسینی</a>
+                            </h3>
+                            <p>همزمان با ایام عزاداری ماه محرم، آستان قدس رضوی پویش نذر آب برای زائران پیاده‌روی اربعین را با…</p>
+                        </div>
+                    </div>
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"><img src="pics/layout_featuredMenu_middle/slide-two.jpg" alt="razavi.ir" loading="lazy"></a> 
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void">افتتاحیه «ضیافت ایثار» در حرم مطهر رضوی</a>
+                            </h3>
+                            <p>نخستین دوره ملی ضیافت ایثار با حضور ۴۰۰ نفر از دختران شهدای دفاع مقدس و دفاع از حرم، جانبازان و…</p>
+                        </div>
+                    </div>
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"> <img src="pics/layout_featuredMenu_middle/slide-three.jpg" alt="razavi.ir" loading="lazy"></a>
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void"> سالروز شهادت امام سجاد(ع) در حرم امام رضا(ع) برگزار شد</a>
+                            </h3>
+                            <p>ویژه برنامه سالروز شهادت مظلومانه پیام‌آور نهضت کربلا حضرت امام سجاد(ع) در حرم امام رضا(ع)…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider_buttons">
+                    <span class="span_button_slide active"></span><span class="span_button_slide "></span><span class="span_button_slide"></span>
+                    <button ><i class="fas fa-chevron-right"></i></button>
+                    <button ><i class="fas fa-chevron-left"></i></button>
+                    <h3> <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </h3>
+                </div>
+            </div>
+            <!-- ------------------------------------ -->
+            <div class="features_context"  id="slide02" style="display:none;">
+                <div class="context_menu">
+                    <ul>
+                        <li>پنچره فولاد</li>
+                        <li>زیارت آنلاین</li>
+                        <li>زیارت نیابتی</li>
+                        <li>اجلاسیه استان های مقدس</li>
+                        <li>اداره کل نذورات</li>
+                        <li>آموزش رضوان</li>
+                    </ul>
+                </div>
+                <div class="content_field" >
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"><img src="pics/layout_featuredMenu_middle/slide-three.jpg" alt="razavi.ir" loading="lazy"></a> 
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void">پویش نذر آب؛ فرصتی برای میزبانی از زائران پیاده‌روی اربعین حسینی</a>
+                            </h3>
+                            <p>همزمان با ایام عزاداری ماه محرم، آستان قدس رضوی پویش نذر آب برای زائران پیاده‌روی اربعین را با…</p>
+                        </div>
+                    </div>
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"><img src="pics/layout_featuredMenu_middle/slide-one.jpg" alt="razavi.ir" loading="lazy"></a> 
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void">افتتاحیه «ضیافت ایثار» در حرم مطهر رضوی</a>
+                            </h3>
+                            <p>نخستین دوره ملی ضیافت ایثار با حضور ۴۰۰ نفر از دختران شهدای دفاع مقدس و دفاع از حرم، جانبازان و…</p>
+                        </div>
+                    </div>
+                    <div class="slide_item">
+                        <div class="top_item">
+                            <a href="#void"> <img src="pics/layout_featuredMenu_middle/slide-two.jpg" alt="razavi.ir" loading="lazy"></a>
+                            <div class="slide_date">
+                                <i class="far fa-calendar-alt" ></i>
+                                <span> ۱۴۰۱/۰۵/۰۵ - ۰۹:۳۱ </span>
+                            </div>
+                        </div>
+                        <div class="bottom_item">
+                            <h3>
+                                <a href="#void"> سالروز شهادت امام سجاد(ع) در حرم امام رضا(ع) برگزار شد</a>
+                            </h3>
+                            <p>ویژه برنامه سالروز شهادت مظلومانه پیام‌آور نهضت کربلا حضرت امام سجاد(ع) در حرم امام رضا(ع)…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider_buttons">
+                    <span class="span_button_slide active"></span><span class="span_button_slide "></span><span class="span_button_slide"></span>
+                    <button ><i class="fas fa-chevron-right"></i></button>
+                    <button ><i class="fas fa-chevron-left"></i></button>
+                    <h3> <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </h3>
+                </div>
+            </div>
+            <div class="features_context"  id="slide-other" style="justify-content:center; align-items:center; display:none;">
+                <h4>NOT ANYTHINGS</h4>
+            </div>
+        </div>
+        <div class="layout_featuredVideos_middle">
+            <div class="video_container">
+                <div class="main_video_item">
+                    <div class="video_item">
+                        <img src="pics/layout_featuredVideos_middle/video-item1.jpg" alt="razavi.ir" loading="lazy">
+                        <div class="description">
+                            <h3>روز امام رضا علیه‌السلام</h3>
+                            <p>امام رضا علیه‌السلام:
+                                توبه کننده از گناه مانند کسی است که گناه نکرده است.
+                                #…
+                            </p>
+                            <p>چهارشنبه  ۱۴۰۱/۰۵/۱۹</p>
+                        </div>
+                    </div>
+                    <a href="#void">دانلود</a>
+                </div>
+                <div class="main_video_item">
+                    <div class="video_item">
+                        <img src="pics/layout_featuredVideos_middle/video-item2.jpg" alt="razavi.ir" loading="lazy">
+                        <div class="description">
+                            <h3>روز امام رضا علیه‌السلام</h3>
+                            <p>امام رضا علیه‌السلام:
+                                توبه کننده از گناه مانند کسی است که گناه نکرده است.
+                                #…
+                            </p>
+                            <p>چهارشنبه  ۱۴۰۱/۰۵/۱۹</p>
+                        </div>
+                    </div>
+                    <a href="#void">دانلود</a>
+                </div>
+                <div class="main_video_item">
+                    <div class="video_item">
+                        <img src="pics/layout_featuredVideos_middle/video-item3.jpg" alt="razavi.ir" loading="lazy">
+                        <div class="description">
+                            <h3>روز امام رضا علیه‌السلام</h3>
+                            <p>امام رضا علیه‌السلام:
+                                توبه کننده از گناه مانند کسی است که گناه نکرده است.
+                                #…
+                            </p>
+                            <p>چهارشنبه  ۱۴۰۱/۰۵/۱۹</p>
+                        </div>
+                    </div>
+                    <a href="#void">دانلود</a>
+                </div>
+            </div>
+            <span>
+                <a href="#void">مطالب بیشتر</a>
+            </span>
+        </div>
+        <div class="layout_shrineFeatures_middle">
+            <div class="item">
+                <a href="#void"><img src="pics/layout_shrineFeatures_middle/item1.jpg" alt="razavi.ir" width="262" heihgt="113" loading="lazy"></a>
+            </div>
+            <div class="item">
+                <a href="#void"><img src="pics/layout_shrineFeatures_middle/item2.jpg" alt="razavi.ir" width="262" heihgt="113" loading="lazy"></a>
+            </div>
+            <div class="item">
+                <a href="#void"><img src="pics/layout_shrineFeatures_middle/item3.jpg" alt="razavi.ir" width="262" heihgt="113" loading="lazy"></a>
+            </div>
+            <div class="item">
+                <a href="#void"><img src="pics/layout_shrineFeatures_middle/item4.jpg" alt="razavi.ir" width="262" heihgt="113" loading="lazy"></a>
+            </div>
+        </div>
+        <div class="layout_podcasts_thirdFromBottom">
+            <div class="float_right">
+                <div class="header_podcast">
+                    <h2>
+                        <i class="fas fa-podcast"></i>
+                        پادکست
+                    </h2>
+                    <span>
+                        <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </span>
+                </div>
+                <div class="podcast_item">
+                    <img src="pics/layout_podcasts_thirdFromBottom/pic1.jpg" alt="razavi.ir" loading="lazy">
+                    <h3>زائری که اهل زیارت نبود</h3>
+                    <audio src="media/audio1.mp3" controls></audio>
+                </div>
+                <hr>
+                <div class="podcast_item">
+                    <img src="pics/layout_podcasts_thirdFromBottom/pic2.jpg" alt="razavi.ir" loading="lazy">
+                    <h3>تحلیل زیارت اربعین</h3>
+                    <audio src="media/audio1.mp3" controls></audio>
+                </div>
+                <hr>
+                <div class="podcast_item">
+                    <img src="pics/layout_podcasts_thirdFromBottom/pic3.jpg" alt="razavi" loading="lazy">
+                    <h3>چگونه شکر کنیم؟</h3>
+                    <audio src="media/audio1.mp3" controls></audio>
+                </div>
+                <hr>
+                <div class="podcast_item">
+                    <img src="pics/layout_podcasts_thirdFromBottom/pic4.jpg" alt="razavi" loading="lazy">
+                    <h3>رادیو حرم | سلام ما به کربلای اطهرت</h3>
+                    <audio src="media/audio1.mp3" controls></audio>
+                </div>
+
+            </div>
+            <div class="float_left">
+                <div class="header_video">
+                    <h2>
+                        <i class="far fa-file-video"></i>
+                        ویدئو
+                    </h2>
+                    <span>
+                        <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </span>
+                </div>
+                <div class="video_item">
+                    <video src="media/video.mp4" controls ></video>
+                </div>
+                <div class="video_description">
+                    <a href="#void">روز امام رضا علیه السلام</a>
+                    <p>من مال حسینم، دنبال حسینم 
+                        ممنون حسینم، مجنون حسینم...
+                        
+                        #چهارشنبه_های_امام_رضایی</p>
+                </div>
+            </div>
+        </div>
+        <div class="layout_books_secondFromBottom">
+            <div class="top_header">
+                <h2>
+                    <i class="fa fa-book"></i>
+                    کتاب رضوی
+                </h2>
+                <div>
+                    <button ><i class="fas fa-chevron-right"></i></button>
+                    <button ><i class="fas fa-chevron-left"></i></button>
+                    <h3> <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </h3>                
+                </div>
+            </div>
+            <div class="container_book">
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img1.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">داعشی و عاشقی</a></img></div>
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img2.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">مسلم بن عقیل شهید جاوید</a></img></div>
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img3.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">عقیله</a></img></div>
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img4.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">با چشمانی باز</a></img></div>
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img5.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">ماه غریب من</a></img></div>
+                <div class="book"><img src="pics/layout_books_secondFromBottom/img6.jpg" alt="razavi" width="155" height="220" loading="lazy"><a href="#void">مرا با خودت ببر</a></img></div>
+            </div>
+        </div>
+        <div class="layout_imamRezaLife_firstFromBottom">
+            <div class="top_header">
+                <h2>
+                    <i class="fas fa-mosque"></i>
+                    زندگی رضوی
+                </h2>
+                <div>
+                    <button ><i class="fas fa-chevron-right"></i></button>
+                    <button ><i class="fas fa-chevron-left"></i></button>
+                    <h3> <i class="fas fa-plus-square"></i>
+                        بیشتر
+                    </h3>                
+                </div>
+            </div>
+            <div class="life_container">
+                <div class="item"><a href="#void" class="img"><img src="pics/layout_imamRezaLife_firstFromBottom/img1.jpeg" alt="razavi" loading="lazy"></a><a href="#void" class="link">سیره امام رضا (ع) در میزبانی کریمانه</a></div>
+                <div class="item"><a href="#void" class="img"><img src="pics/layout_imamRezaLife_firstFromBottom/img2.jpg " alt="razavi" loading="lazy"></a><a href="#void" class="link">اهمیت کار در سیره رضوی</a></div>
+                <div class="item"><a href="#void" class="img"><img src="pics/layout_imamRezaLife_firstFromBottom/img3.jpg " alt="razavi" loading="lazy"></a><a href="#void" class="link">"کرامت انسان" و " حقوق بشر" در سیره رضوی</a></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="Logo_main">
+                <a href="index.html">
+                   <img src="pics/logo.png" title="خانه" id="mainLogo">
+               </a>
+           </div>
+           <h4>تمام حقوق این وبگاه متعلق به آستان قدس رضوی است.</h4>
+           <div class="icons">
+                <a href="#void"><i class="fas fa-home"></i></a>
+                <a href="#void"><i class="fab fa-rocketchat"></i></a>
+                <a href="#void"><i class="fab fa-instagram"></i></a>
+                <a href="#void"><i class="fab fa-internet-explorer"></i></a>
+                <a href="#void"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+    <a href="#void" id="link1">
+        <span class="link_icon"><i class="fas fa-newspaper"></i></span>
+        <span class="link_text">ستاد خبری حراست</span>
+    </a>
+    <a href="#void" id="link2">
+        <span class="link_icon">
+            <i class="fas fa-mail-bulk"></i>
+        </span>
+        <span class="link_text">ارتباط با ما</span>
+    </a>
+    <a href="#" id="button_to_top" >
+        <i class="fa fa-caret-up"></i>
+    </a>
+    <a href="#cli" accesskey="r"></a><a href="#cli" accesskey="ق" style="display:none;"></a>
+    <div id="cli">
+        <textarea spellcheck="false" oninput="console.clear();eval(this.value)"></textarea>
+        <input type="range" id="winDrag" min="20" value='20' max="500" oninput="cli.style.left = winDrag.value+'px'">
+        <a href="#mess-void" class="circle"></a>
+        <a href="#mess-void" class="circle"></a>
+        <a href="#mess-void" class="circle"></a>
+    </div>
+</body>
+</html>
